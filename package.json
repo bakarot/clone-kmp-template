@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/hieu-dd/clone-kmp-template/issues"
   },
-  "homepage": "https://github.com/hieu-dd/clone-kmp-template#readme"
+  "homepage": "https://github.com/hieu-dd/clone-kmp-template#readme",
+  "publishConfig": {
+    "@hieu-dd:registry": "https://npm.pkg.github.com"
+  }
 }
