@@ -1,0 +1,19 @@
+{
+  "name": "@hieu-dd/clone-kmp-template",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "exit 0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/hieu-dd/clone-kmp-template.git"
+  },
+  "author": "hieu-dd",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hieu-dd/clone-kmp-template/issues"
+  },
+  "homepage": "https://github.com/hieu-dd/clone-kmp-template#readme"
+}
