@@ -4,7 +4,9 @@ on:
   release:
     types: [ created ]
   push:
-    branches: [ "release_packages/**" ]
+    branches:
+      - release-packages/**
+
 
 jobs:
   publish:
