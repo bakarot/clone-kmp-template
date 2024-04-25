@@ -22,7 +22,7 @@ kotlin {
 publishing {
     publications {
         create<MavenPublication>("gpr") {
-            from(components["java"])
+            from(components["kotlin"])
             groupId = "kmp.template"
             artifactId = "kmp-template"
             version = "0.1.0"
