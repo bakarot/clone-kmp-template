@@ -2,14 +2,14 @@ plugins {
     id(libs.plugins.commonMppLib.get().pluginId)
     id("maven-publish")
 }
-
+version = "0.0.4"
 android {
     namespace = "kmp.template"
 }
 
 kotlin {
     withSourcesJar(publish = false)
-    android{
+    android {
         withSourcesJar(publish = true)
     }
     androidTarget {
@@ -27,32 +27,23 @@ kotlin {
 }
 
 publishing {
-    publications {
-        create<MavenPublication>("gpr") {
-            from(components["kotlin"])
-            groupId = "kmp.template"
-            artifactId = "kmp-template"
-            version = "0.1.0"
-
-            pom {
-                name.set("kmp template")
-                description.set("A description of my library")
-                url.set("https://github.com/hieu-dd/clone-kmp-template")
-            }
-        }
-    }
-
     repositories {
         maven {
             name = "GitHubPackages"
             url = uri("https://maven.pkg.github.com/hieu-dd/clone-kmp-template")
             credentials {
-                username = project.findProperty("gpr.user") as String? ?: System.getenv("GITHUB_ACTOR")
-                password = project.findProperty("gpr.key") as String? ?: System.getenv("GITHUB_TOKEN")
+                username =
+                    project.findProperty("gpr.user") as String? ?: System.getenv("USERNAME_GITHUB")
+                password =
+                    project.findProperty("gpr.token") as String? ?: System.getenv("TOKEN_GITHUB")
             }
         }
     }
+    publications {
+        create<MavenPublication>("multiplatform") {
+            groupId = "kmp.template"
+            artifactId = "library"
+            from(components["kotlin"])
+        }
+    }
 }
-
-
-

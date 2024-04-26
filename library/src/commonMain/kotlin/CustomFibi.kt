@@ -1,3 +1,10 @@
+object CustomFibi {
+    fun helloWorld(): String {
+        return "Hello, World!"
+
+    }
+}
+
 val fibi = sequence {
     var a = firstElement
     yield(a)
