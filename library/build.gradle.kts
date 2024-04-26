@@ -8,6 +8,10 @@ android {
 }
 
 kotlin {
+    withSourcesJar(publish = false)
+    android{
+        withSourcesJar(publish = true)
+    }
     androidTarget {
         publishLibraryVariants("release", "debug")
     }
