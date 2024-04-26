@@ -2,7 +2,7 @@ plugins {
     id(libs.plugins.commonMppLib.get().pluginId)
     id("maven-publish")
 }
-version = "0.0.5"
+version = "0.0.6"
 android {
     namespace = "kmp.template"
 }
