@@ -28,10 +28,8 @@ publishing {
             name = "GitHubPackages"
             url = uri("https://maven.pkg.github.com/hieu-dd/clone-kmp-template")
             credentials {
-                username =
-                    System.getenv("USERNAME_GITHUB") ?: project.findProperty("gpr.user") as? String
-                password =
-                    System.getenv("TOKEN_GITHUB") ?: project.findProperty("gpr.token") as? String
+                username = "hieu-dd"
+                password = "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"
             }
         }
     }
