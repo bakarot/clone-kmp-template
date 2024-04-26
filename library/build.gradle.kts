@@ -2,18 +2,14 @@ plugins {
     id(libs.plugins.commonMppLib.get().pluginId)
     id("maven-publish")
 }
-version = "0.0.4"
+version = "0.0.5"
 android {
     namespace = "kmp.template"
 }
 
 kotlin {
-    withSourcesJar(publish = false)
-    android {
-        withSourcesJar(publish = true)
-    }
     androidTarget {
-        publishLibraryVariants("release", "debug")
+        publishLibraryVariants("release")
     }
     sourceSets {
         val commonMain by getting {
