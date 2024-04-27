@@ -23,8 +23,5 @@ jobs:
       - name: Grant execute permission for gradlew
         run: chmod +x gradlew
 
-      - name: Build
-        run: ./gradlew assemble --stacktrace -PGITHUB_USER=${{ github.actor }} -PGITHUB_TOKEN=${{ secrets.GITHUB_TOKEN }}
-
       - name: Release library
         run: ./gradlew shared:publish -PGITHUB_USER=${{ github.actor }} -PGITHUB_TOKEN=${{ secrets.GITHUB_TOKEN }}
