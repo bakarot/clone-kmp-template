@@ -31,4 +31,4 @@ jobs:
         run: ./gradlew publish
         env:
           GITHUB_ACTOR: bakarot
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: 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
