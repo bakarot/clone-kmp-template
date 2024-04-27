@@ -28,9 +28,9 @@ publishing {
         maven {
             setUrl("https://maven.pkg.github.com/bakarot/clone-kmp-template")
             credentials {
-                username = System.getenv("GITHUB_ACTOR") ?: "bakarot"
+                username = System.getenv("GH_ACTOR") ?: "bakarot"
                 password =
-                    System.getenv("GITHUB_TOKEN") ?: "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"
+                    System.getenv("GH_TOKEN") ?: "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"
             }
         }
     }
