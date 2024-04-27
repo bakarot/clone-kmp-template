@@ -9,7 +9,8 @@ android {
 
 kotlin {
     androidTarget {
-        publishLibraryVariants("release")
+        publishLibraryVariants("release", "debug")
+        publishLibraryVariantsGroupedByFlavor = true
     }
     sourceSets {
         val commonMain by getting {
@@ -25,8 +26,7 @@ kotlin {
 publishing {
     repositories {
         maven {
-            name = "GitHubPackages"
-            url = uri("https://maven.pkg.github.com/bakarot/clone-kmp-template")
+            setUrl("https://maven.pkg.github.com/bakarot/clone-kmp-template")
             credentials {
                 username = System.getenv("GITHUB_ACTOR") ?: "bakarot"
                 password =
