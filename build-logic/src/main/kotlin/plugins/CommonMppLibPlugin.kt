@@ -58,9 +58,9 @@ class CommonMppLibPlugin : Plugin<Project> {
                         }
                     }
                 }
-                iosX64("ios")
-                iosArm64()
-                iosSimulatorArm64()
+//                iosX64("ios")
+//                iosArm64()
+//                iosSimulatorArm64()
 
                 sourceSets.apply {
                     commonMain.get()
@@ -69,8 +69,8 @@ class CommonMppLibPlugin : Plugin<Project> {
                     }
                     nativeMain.get().dependsOn(commonMain.get())
                     nativeTest.get().dependsOn(commonTest.get())
-                    iosMain.get().dependsOn(nativeMain.get())
-                    iosTest.get().dependsOn(nativeTest.get())
+//                    iosMain.get().dependsOn(nativeMain.get())
+//                    iosTest.get().dependsOn(nativeTest.get())
                 }
             }
         }
