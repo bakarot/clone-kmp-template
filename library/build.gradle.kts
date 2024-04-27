@@ -2,7 +2,7 @@ plugins {
     id(libs.plugins.commonMppLib.get().pluginId)
     id("maven-publish")
 }
-version = "0.0.7"
+version = "0.0.2"
 android {
     namespace = "kmp.template"
 }
@@ -26,10 +26,10 @@ publishing {
     repositories {
         maven {
             name = "GitHubPackages"
-            url = uri("https://maven.pkg.github.com/hieu-dd/clone-kmp-template")
+            url = uri("https://maven.pkg.github.com/bakarot/clone-kmp-template")
             credentials {
-                username = "hieu-dd"
-                password = "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"
+                username = "bakarot"
+                password = "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"
             }
         }
     }
