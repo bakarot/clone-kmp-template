@@ -24,4 +24,4 @@ jobs:
         run: chmod +x gradlew
 
       - name: Release library
-        run: ./gradlew shared:publish -PGITHUB_USER=${{ github.actor }} -PGITHUB_TOKEN=${{ secrets.GITHUB_TOKEN }}
+        run: ./gradlew library:publish -PGITHUB_USER=${{ github.actor }} -PGITHUB_TOKEN=${{ secrets.GITHUB_TOKEN }}
